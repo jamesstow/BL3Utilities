@@ -8,7 +8,7 @@
     size2 := "w80 h20"
     size3 := "w200 h20"
     ; create tabs
-    Gui, Add, Tab2, w705 h255, Gameplay Macros|Custom Apps
+    Gui, Add, Tab2, w705 h275, Gameplay Macros|Custom Apps
     ; gameplay macros
     Gui, Tab, Gameplay Macros
     ; game
@@ -26,13 +26,17 @@
     Gui, Add, Edit, x+10 %size2% vKeySprint, %KeySprint%
     Gui, Add, Text, xs %size1% 0x200 vKeyCrouchText gTooltip, Crouch Key:
     Gui, Add, Edit, x+10 %size2% vKeyCrouch, %KeyCrouch%
+    Gui, Add, Text, xs %size1% 0x200 vKeyForwardText gTooltip, Forward Key:
+    Gui, Add, Edit, x+10 %size2% vKeyForward, %KeyForward%
     Gui, Add, Text, x+30 ys %size1% 0x200 Section vDelaySprintText gTooltip, Sprint Duration (ms):
     Gui, Add, Edit, ys %size2% number limit4 vDelaySprint, %DelaySprint%
     Gui, Add, Text, xs %size1% 0x200 vDelayCrouchDownText gTooltip, Crouch Down (ms):
     Gui, Add, Edit, x+10 %size2% number limit4 vDelayCrouchDown, %DelayCrouchDown%
     Gui, Add, Text, xs %size1% 0x200 vDelayCrouchUpText gTooltip, Crouch Up (ms):
     Gui, Add, Edit, x+10 %size2% number limit4 vDelayCrouchUp, %DelayCrouchUp%
-    GroupBox("slide", "Slide Repeater Macro", "HotkeySlideActive|HotkeySlide|KeySprintText|KeySprint|KeyCrouchText|KeyCrouch|DelaySprintText|DelaySprint|DelayCrouchDownText|DelayCrouchDown|DelayCrouchUpText|DelayCrouchUp", "Green")
+    Gui, Add, Text, xs %size1% 0x200 vDelayForwardText gTooltip, Delay Forward (ms):
+    Gui, Add, Edit, x+10 %size2% number limit4 vDelayForward, %DelayForward%
+    GroupBox("slide", "Slide Repeater Macro", "HotkeySlideActive|HotkeySlide|KeySprintText|KeySprint|KeyCrouchText|KeyCrouch|KeyForwardText|KeyForward|DelaySprintText|DelaySprint|DelayCrouchDownText|DelayCrouchDown|DelayCrouchUpText|DelayCrouchUp|DelayForwardText|DelayForward", "Green")
     ; restart
     Gui, Add, Checkbox, x22 y+10 %size1% Section vHotkeyRestartActive Checked%HotkeyRestartActive%, Restart Hotkey:
     Gui, Add, Edit, ys %size2% vHotkeyRestart, %HotkeyRestart%
@@ -99,7 +103,7 @@
     GroupBox("app6", "App #6", "Custom6Text|Custom6|Custom6Run|HotkeyApp6Active|HotkeyApp6", "Green")
     ; --- Controls ---
     Gui, Tab
-    Gui, Add, Button, x40 y+20 w120 h30 Section vUpdateCheck gUpdateCheck, Check for Updates
+    Gui, Add, Button, x40 y+40 w120 h30 Section vUpdateCheck gUpdateCheck, Check for Updates
     Gui, Add, Button, ys w120 h30 vKeyCodes gKeyCodes, Show Key Codes
     Gui, Add, Button, ys w120 h30 vRestartScript gRestartScript, Restart Script
     Gui, Add, Button, ys w120 h30 vResetConfig gResetConfig, Reset Configuration

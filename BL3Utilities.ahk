@@ -128,6 +128,8 @@ CommandRestartGame:
 	return
     
 CommandSlide:
+    SendInput {%KeyForward% Down}
+    Sleep, %DelayForward%
     while GetKeyState(HotkeySlide, "P") {
         SendInput {%KeySprint%}
         Sleep, %DelaySprint%
@@ -136,6 +138,7 @@ CommandSlide:
         SendInput {%KeyCrouch% Up}
         Sleep, %DelayCrouchUp%
     }
+    SendInput {%KeyForward% Up}
 	return
 
 CommandAttack:

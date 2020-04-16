@@ -22,9 +22,11 @@
 	defaultProfile .= "HotkeySlide=XButton2`n"
 	defaultProfile .= "KeySprint=LShift`n"
 	defaultProfile .= "KeyCrouch=LControl`n"
+	defaultProfile .= "KeyForward=w`n"
 	defaultProfile .= "DelaySprint=100`n"
 	defaultProfile .= "DelayCrouchDown=500`n"
 	defaultProfile .= "DelayCrouchUp=100`n"
+	defaultProfile .= "DelayForward=300`n"
 	defaultProfile .= "[AttackSpam]`n"
 	defaultProfile .= "HotkeyAttackActive=0`n"
 	defaultProfile .= "HotkeyAttack=LButton`n"
@@ -64,9 +66,11 @@ UpdateHotkeys:
 	updsettings .= "HotkeySlide=" . HotkeySlide . "`n"
 	updsettings .= "KeySprint=" . KeySprint . "`n"
 	updsettings .= "KeyCrouch=" . KeyCrouch . "`n"
+	updsettings .= "KeyForward=" . KeyForward . "`n"
 	updsettings .= "DelaySprint=" . DelaySprint . "`n"
 	updsettings .= "DelayCrouchDown=" . DelayCrouchDown . "`n"
 	updsettings .= "DelayCrouchUp=" . DelayCrouchUp . "`n"
+	updsettings .= "DelayForward=" . DelayForward . "`n"
 	updsettings .= "[AttackSpam]`n"
 	updsettings .= "HotkeyAttackActive=" . HotkeyAttackActive . "`n"
 	updsettings .= "HotkeyAttack=" . HotkeyAttack . "`n"
@@ -122,9 +126,11 @@ readFromFile(){
 	IniRead, HotkeySlide, %ini%, SlideSpam, HotkeySlide, %A_Space%
 	IniRead, KeySprint, %ini%, SlideSpam, KeySprint
 	IniRead, KeyCrouch, %ini%, SlideSpam, KeyCrouch
+	IniRead, KeyForward, %ini%, SlideSpam, KeyForward
 	IniRead, DelaySprint, %ini%, SlideSpam, DelaySprint
 	IniRead, DelayCrouchDown, %ini%, SlideSpam, DelayCrouchDown
 	IniRead, DelayCrouchUp, %ini%, SlideSpam, DelayCrouchUp
+	IniRead, DelayForward, %ini%, SlideSpam, DelayForward
 	IniRead, HotkeyAttackActive, %ini%, AttackSpam, HotkeyAttackActive
 	IniRead, HotkeyAttack, %ini%, AttackSpam, HotkeyAttack, %A_Space%
 	IniRead, DelayAttack, %ini%, AttackSpam, DelayAttack

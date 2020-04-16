@@ -19,12 +19,16 @@ KeySprintText_TT .= "This key must be set to the same key used for sprinting in 
 KeySprint_TT = %KeySprintText_TT%
 KeyCrouchText_TT .= "This key must be set to the same key used for crouching in game.`nRefer to the key codes list to the right."
 KeyCrouch_TT = %KeyCrouchText_TT%
+KeyForwardText_TT .= "This key must be set to the same key used for going forward in game.`nRefer to the key codes list to the right."
+KeyForward_TT = %KeyForwardText_TT%
 DelaySprintText_TT .= "The delay between sprint activation and crouch key press.`nSometimes values below 100ms won't register properly."
 DelaySprint_TT = %DelaySprintText_TT%
-DelayCrouchDownText_TT .= "The duration of the crouch key being held down resp the slide duration.`nWithout a Snowdrift artifact a value higher than 500ms is inefficient."
+DelayCrouchDownText_TT .= "The duration of the crouch key being held down resp the slide duration.`nWithout a Snowdrift artifact a value higher than 500ms is inefficient, else 1000ms is about right."
 DelayCrouchDown_TT = %DelayCrouchDownText_TT%
 DelayCrouchUpText_TT .= "The delay between releasing the crouch key and activating sprint again.`nSometimes values below 100ms won't register properly."
 DelayCrouchUp_TT = %DelayCrouchUpText_TT%
+DelayForwardText_TT .= "The delay between pressing forward and the sprint key.`nSometimes values below 300ms won't register properly."
+DelayForward_TT = %DelayForwardText_TT%
 ; attack
 HotkeyAttackActive_TT .= "Disable and enable the Attack macro hotkey.`nWhen disabled the assigned hotkey does nothing."
 HotkeyAttack_TT .= "Assign a hotkey which when held down will trigger the`nleft mouse button periodically. Great for Jakobs guns."
